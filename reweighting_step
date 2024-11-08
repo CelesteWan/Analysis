@@ -1,0 +1,17 @@
+Pyreweighting:
+
+Step 1: (extarct final column of data_1.dat (min distance between ligand and protein)
+
+awk '{print $4}' dist_1.dat > output.dat
+
+Step 2: (extract data that above 12 in output.dat)
+
+python3 extract_above_12.py
+
+Get the values_above_12.dat and indices_above_12.dat
+
+step 3:
+
+
+
+
