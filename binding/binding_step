@@ -1,0 +1,8 @@
+1. get minmum distance between ligand and protein (ParGaMD can skip this)
+   cpptraj -i min_distance.cpptraj
+   
+2.extract the final column
+awk 'NR > 1 {print $4}' min_d.txt > output.dat
+
+3. calculate the number of binding and unbinding event
+python3 binding.py
