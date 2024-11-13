@@ -1,0 +1,4 @@
+parm wt_1202.prmtop
+trajin ligamd_test.nc
+strip :WAT outprefix stripped
+trajout ligamd_strip.nc
