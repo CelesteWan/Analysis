@@ -1,0 +1,7 @@
+parm ../stripped.monomer.prmtop
+trajin ../monomer_final.nc
+
+secstruct :1-140 sumout secondary_avg.sum
+go
+assignout :1-140 assignout secondary_overall.dat
+go

@@ -1,0 +1,15 @@
+parm ../stripped.wt_801.prmtop
+trajin ../ligamd_801.nc 500001 last 5 
+trajin ../../801_2l/ligamd_801.nc 500001 last 5
+trajin ../../801_3l/ligamd_801.nc 500001 last 5
+  
+cluster c1 \
+  kmeans clusters 10 randompoint maxit 500 rms :1-140@C,N,O,CA,CB&!@H= \
+  sieve 10 random \
+  out clustertime.dat \ 
+  summary summary.dat \
+  info info.dat \
+  cpopvtime cpoptime.agr normframe \
+  repout rep repfmt pdb \
+  singlerepout singlerep.nc singlerepfmt netcdf \
+avgout avg avgfmt pdb

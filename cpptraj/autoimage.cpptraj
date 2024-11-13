@@ -1,0 +1,6 @@
+parm stripped.wt_801.prmtop
+trajin ligamd_801.nc
+autoimage
+trajout ligamd_801_auto.nc netcdf
+
+

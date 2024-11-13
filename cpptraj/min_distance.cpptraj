@@ -1,0 +1,6 @@
+parm stripped.wt_801.prmtop
+trajin ligamd_strip.nc
+trajin ligamd_strip_2.nc
+trajin ligamd_strip_3.nc
+trajin ligamd_strip_4.nc
+nativecontacts :1-140 :141 mindist out min_d.txt

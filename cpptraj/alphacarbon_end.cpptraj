@@ -1,0 +1,4 @@
+parm stripped.wt_801.prmtop
+trajin ligamd_801.nc
+distance D1 :1@CA :140@CA out end_distance.dat
+run
