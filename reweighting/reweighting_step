@@ -1,0 +1,28 @@
+Pyreweighting:
+
+Step 1: (extarct final column of data.dat (min distance between ligand and protein)
+
+awk '{print $4}' dist.dat > output.dat
+
+step 2: (find out the indice that is higher than 30)
+python3 extract_above_30.py
+
+step 3: (filter data that is higher than 30)
+
+python3  data_trim.py 
+python3 output_trim.py
+
+step 4: (put gamd_trim.log to get weights.dat)
+
+awk 'NR%1==0' gamd_trim.log | awk '{print ($8+$7)/(0.001987*300)" " $2 " " ($8+$7)}' > weights.dat
+
+step 5: (get reweight)
+-./reweight-1d.sh $Emax $cutoff $binx $data $T
+
+sh reweight-1d.sh 20 20 0.5 output_trim.dat 300
+
+python PyReweighting-1D.py -input output_trim.dat -T 300 -disc 0.5 -Emax 20 -job amdweight_MC -cutoff 20 -job noweight -weight weights.dat
+
+step 6: (plot)
+
+python3 pmf_plot.py
