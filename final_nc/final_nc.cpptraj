@@ -1,0 +1,3 @@
+parm stripped.wt_801.prmtop
+trajin ligamd_s801_unstrip.nc 1 2000000 2
+trajout ligamd_801.nc

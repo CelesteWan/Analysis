@@ -1,0 +1,6 @@
+After running the simulation, need to do some steps to get teh final trajectory file to analysis 
+step 1: combine all trajectory amd strip the water out of trajectory
+cpptraj -i combine.nc
+
+step 2: trim the trajectory to size down the file 
+cpptraj -i final.cpptraj

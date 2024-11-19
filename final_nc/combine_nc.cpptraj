@@ -1,0 +1,12 @@
+parm stripped.wt_801.prmtop
+trajin ligamd_strip.nc last 2
+trajin ligamd_strip_2.nc last 2
+trajin ligamd_strip_3.nc last 2
+trajin ligamd_strip_4.nc last 2
+trajin ligamd_strip_5.nc last 2
+trajin ligamd_strip_6.nc last 2
+autoimage
+strip :WAT outprefix stripped
+trajout ligamd_strip_801.nc
+
+
