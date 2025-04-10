@@ -1,0 +1,5 @@
+#calculale alpha carbon rmsd
+parm stripped.wt_801.prmtop
+trajin ligamd_801.nc
+rms first @CA out rmsd.out
+
